@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hitech.the_advanced_file_manager.FileHomepageController">
+  <children>
+    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane prefHeight="576.0" prefWidth="208.0">
+          <children>
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="51.0" minWidth="60.0" prefHeight="37.0" prefWidth="232.0" style="&#10;" text="File Types" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+                  <Button fx:id="fileDirectory" layoutX="1.0" layoutY="311.0" mnemonicParsing="false" onAction="#onAnyButtonClick" prefHeight="37.0" prefWidth="229.0" text="File Directory">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="documents" layoutX="1.0" layoutY="102.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="229.0" text="Documents">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="others" layoutX="1.0" layoutY="256.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="229.0" text="Others">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="audio" layoutX="1.0" layoutY="206.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="229.0" text="Audio">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="videos" layoutX="1.0" layoutY="154.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="229.0" text="Videos">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="4.0" layoutY="6.0" prefHeight="37.0" prefWidth="223.0" text="Advanced file manager">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="selectGroup" layoutX="-2.0" layoutY="369.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="232.0" text="Select Group">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="576.0" prefWidth="459.0">
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="573.0" prefWidth="438.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="82.0" layoutY="7.0" prefHeight="39.0" prefWidth="274.0" text="Files ">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pathTextField" layoutX="9.0" layoutY="56.0" prefHeight="30.0" prefWidth="264.0" promptText="directory path">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="273.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="64.0" text="Browse" />
+                        <VBox fx:id="filesVBox" layoutX="-3.0" layoutY="103.0" prefHeight="469.0" prefWidth="442.0" spacing="10.0" />
+                     </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+            <Label />
+        <AnchorPane prefHeight="592.0" prefWidth="231.0">
+          <children>
+            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <Label alignment="CENTER" layoutX="4.0" layoutY="269.0" prefHeight="27.0" prefWidth="200.0" text="List of file types ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numberOfFolders" layoutX="14.0" layoutY="80.0" prefHeight="27.0" prefWidth="174.0" text="Total Folders :" />
+                  <Label fx:id="numberOfFiles" layoutX="13.0" layoutY="107.0" prefHeight="27.0" prefWidth="174.0" text="Total Files      :" />
+                  <Label fx:id="folderSize" layoutX="14.0" layoutY="134.0" prefHeight="27.0" prefWidth="174.0" text="Total size      :" />
+                  <ListView layoutX="4.0" layoutY="325.0" prefHeight="231.0" prefWidth="200.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>
